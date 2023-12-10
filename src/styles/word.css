@@ -1,0 +1,28 @@
+.hangman-word{
+    display: flex;
+    gap: .25em;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.letter{
+    border-bottom: .1em solid var(--color-shade);
+}
+
+.visible{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.won{
+    color: var(--color-shade);
+}
+
+.lost{
+    color: red;
+}
