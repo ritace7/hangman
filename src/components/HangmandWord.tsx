@@ -14,7 +14,7 @@ const HangmanWord = ({guessedLetters, wordToGuess, reveal=false}: HangmanWordPro
                 <span className="letter" key={index}>
                     <span className={`${guessedLetters.includes(letter)|| reveal?"visible":"hidden"} ${!guessedLetters.includes(letter) && reveal?"lost":"won"}`}>
                          {letter}
-                    </span>                
+                    </span>
                 </span>
             ))}
         </div>

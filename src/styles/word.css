@@ -1,14 +1,18 @@
 .hangman-word{
     display: flex;
-    gap: .25em;
-    font-size: 6rem;
+    gap: .15em;
+    font-family: var(--font-text);
+    font-size: 4em;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: monospace;
 }
 
 .letter{
-    border-bottom: .1em solid var(--color-shade);
+    width: 1em;
+    height: 1.6em;
+    text-align: center;
+    border-bottom: 0.1em solid var(--color-shade);
+    display: block;
 }
 
 .visible{
