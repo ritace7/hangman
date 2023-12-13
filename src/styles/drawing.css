@@ -58,7 +58,7 @@
     position: absolute;
     top: 120px;
     right: -90px;
-    rotate:  -30deg;
+    transform:   rotate(-30deg);
     transform-origin: left bottom;
 }
 
@@ -69,8 +69,9 @@
     position: absolute;
     top: 120px;
     right: 5px;
-    rotate:  30deg;
+    transform: rotate(30deg);
     transform-origin: right bottom;
+
 }
 
 .right-leg{
@@ -80,7 +81,7 @@
     position: absolute;
     top: 172px;
     right: -85px;
-    rotate:  60deg;
+    transform: rotate(60deg);
     transform-origin: left bottom;
 }
 
@@ -91,6 +92,6 @@
     position: absolute;
     top: 172px;
     right: 0;
-    rotate:  -60deg;
+    transform:  rotate(-60deg);
     transform-origin: right bottom;
 }

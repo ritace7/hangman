@@ -24,9 +24,13 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const wordsArray: WordDictionary = words;
 
-  useEffect(()=>{
+  const reset = () =>{
     setWordToGuess(wordsArray[difficulty][Math.floor(Math.random() * wordsArray[difficulty].length)])    
     setGuessedLetters([]);
+  }
+
+  useEffect(()=>{
+    reset();
   },[difficulty])
   
   const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
@@ -71,8 +75,7 @@ function App() {
       if(key !== "Enter") return
       
       e.preventDefault()
-      setGuessedLetters([])
-      setWordToGuess(wordsArray[difficulty][Math.floor(Math.random() * wordsArray[difficulty].length)])
+      reset();
     }
 
     document.addEventListener("keypress", handler)
@@ -98,6 +101,7 @@ function App() {
         <DifficultyLevel 
             difficulty={difficulty} 
             setDifficulty={setDifficulty}
+            reset={reset}
         />
       </span>
 
